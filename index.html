@@ -3,112 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="8-Lpb4ZxAFvpclsrOs9UL7jArWhSr7mpPcxK2G_WdCA" />
-  <meta name="theme-color" content="#071225">
-  <title>Ahmad UI - Photography Tools</title>
+  <meta name="google-site-verification" content="8-Lpb4ZxAFvpclsrOs9UL7jArWhSr7mpPcxK2G_WdCA">
+  <meta name="theme-color" content="#06111f">
+  <meta name="description" content="AHMAD UI — Premium Photography Tools">
+  <title>AHMAD UI — Photography Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
   <header class="topbar">
-📷 AHMAD UI 🔔 
+    <a class="brand" href="#home" aria-label="AHMAD UI Home">
+      <span class="brand-logo">
+        <img src="ahmad-ui-logo.png" alt="AHMAD UI logo">
+      </span>
+      <span class="brand-copy">
+        <strong>AHMAD <em>UI</em></strong>
+        <small>PHOTOGRAPHY TOOLS</small>
+      </span>
+    </a>
 
-📷 PROFESSIONAL PHOTOGRAPHY WORKSPACE
+    <nav class="desktop-nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
 
-Capture. Edit. Inspire.
+    <button class="bell" id="notificationBtn" aria-label="Notifications">
+      <span>🔔</span>
+      <i></i>
+    </button>
+  </header>
 
-All your essential photography tools in one beautiful place. Edit, enhance, remove backgrounds and prepare photos quickly. 
+  <main id="home">
+<section id="tools" class="tools-section">
+      <div class="section-kicker">OUR TOOLS</div>
+      <div class="section-title-row">
+        <div>
+          <h2>Everything you need.</h2>
+          <p>Fast, clean and mobile-friendly tools for your everyday needs.</p>
+        </div>
+        <span class="tool-count">06 TOOLS</span>
+      </div>
 
-Start Editing → View Details 
+      <div class="tool-grid">
+        <button class="tool-card blue" data-tool="Cricket Live Score">
+          <span class="tool-number">01</span>
+          <span class="tool-icon">🏏</span>
+          <h3>Cricket Live Score</h3>
+          <p>Live cricket scores and updates.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
 
-OVERVIEW
+        <button class="tool-card green" data-tool="Football Live Score">
+          <span class="tool-number">02</span>
+          <span class="tool-icon">⚽</span>
+          <h3>Football Live Score</h3>
+          <p>Live football scores and updates.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
 
-Good afternoon. 👋
+        <button class="tool-card indigo" data-tool="PDF Scanner">
+          <span class="tool-number">03</span>
+          <span class="tool-icon">📄</span>
+          <h3>PDF Scanner</h3>
+          <p>Scan and prepare PDF documents.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
 
-08 Tools 
+        <button class="tool-card pink" data-tool="Remove BG">
+          <span class="tool-number">04</span>
+          <span class="tool-icon">✂️</span>
+          <h3>Remove BG</h3>
+          <p>Remove photo backgrounds quickly.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
 
-12 Tasks 
+        <button class="tool-card gold" data-tool="App Download">
+          <span class="tool-number">05</span>
+          <span class="tool-icon">⬇️</span>
+          <h3>App Download</h3>
+          <p>Download the AHMAD UI app.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
 
-24% Progress 
+        <button class="tool-card sky" data-tool="BMET">
+          <span class="tool-number">06</span>
+          <span class="tool-icon">💼</span>
+          <h3>BMET</h3>
+          <p>BMET tools and services.</p>
+          <span class="tool-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+<section id="about" class="about-card">
+      <div class="about-photo">
+        <img src="ahmad-ui-logo.png" alt="AHMAD UI">
+      </div>
+      <div class="about-copy">
+        <div class="section-kicker">ABOUT AHMAD UI</div>
+        <h2>Built around your photography workflow.</h2>
+        <p>
+          A premium, simple workspace for everyday photo editing,
+          enhancement, background work and document-photo preparation.
+        </p>
+        <div class="feature-list">
+          <span>✓ Fast workflow</span>
+          <span>✓ Clean interface</span>
+          <span>✓ Mobile first</span>
+          <span>✓ Premium design</span>
+        </div>
+      </div>
+    </section>
 
-04 Pending 
+    <section class="cta">
+      <div>
+        <div class="section-kicker">READY TO CREATE?</div>
+        <h2>Turn your next photo into something better.</h2>
+        <p>Choose a tool and start your workflow.</p>
+      </div>
+      <a class="primary-btn" href="#tools">Explore Tools <span>→</span></a>
+    </section>
 
-OUR TOOLS
+  </main>
 
-Everything you need
+  <footer>
+    <div class="footer-brand">
+      <img src="ahmad-ui-logo.png" alt="">
+      <strong>AHMAD UI</strong>
+    </div>
+    <span>© 2026 AHMAD UI. All rights reserved.</span>
+  </footer>
 
-All photography tools in one place.
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <a class="active" href="#home"><span>⌂</span><small>Home</small></a>
+    <a href="#tools"><span>✦</span><small>Tools</small></a>
+    <a href="#about"><span>◉</span><small>My</small></a>
+    <button id="settingsBtn"><span>⚙</span><small>Setting</small></button>
+  </nav>
 
-8 tools ✨ 
+  <div class="toast" id="toast"></div>
 
-🖼️ 
-
-Photo Editing
-
-Edit like a pro
-
-→ ✨ 
-
-Photo Enhance
-
-Improve quality
-
-→ ✂️ 
-
-Background Remove
-
-One click remove
-
-→ 🌅 
-
-Background Change
-
-Change background
-
-→ 📄 
-
-Photo to PDF
-
-Convert image to PDF
-
-→ ⬇️ 
-
-Download
-
-Download your files
-
-→ 🪪 
-
-NID Photo
-
-Make NID photo
-
-→ 👤 
-
-Passport Photo
-
-Make passport size
-
-→ 
-
-ABOUT AHMAD UI
-
-Bring Your Photos to Life
-
-Professional photography utilities designed with a clean, modern interface so you can work faster from your phone or computer. 
-
-✓ Fast workflow
-
-✓ Clean interface
-
-✓ Easy to use
-
-Need Help?
-
-Let's create something great.
-
-Contact Us → 
-
-📷 AHMAD UI © 2026. All rights reserved.
-
-🏠 Home 🎨 Tools 👤 My ⚙️ Setting
+  <script src="script.js"></script>
+</body>
+</html>
