@@ -28,7 +28,7 @@ export default {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        "X-Api-Key": env.REMOVE_BG_API_KEY
+        "YsHqfuwV5d37uQxK9dCbfdVn": env.REMOVE_BG_API_KEY
       },
       body: form
     });
