@@ -1,4 +1,16 @@
-.login-section{padding:24px 0 8px} .login-form{max-width:520px;margin:0 auto;padding:24px;border-radius:18px;background:rgba(17,32,58,.92);border:1px solid #24446f;box-shadow:0 12px 30px rgba(0,0,0,.22)} .login-form h2{margin:0 0 20px;font-size:28px} .login-form .form-group{margin-bottom:16px} .login-form label{display:block;margin-bottom:7px;font-weight:700} .login-form input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid #31547f;background:#0b1730;color:#fff;outline:none;font:inherit} .login-form input:focus{border-color:#59c7ff;box-shadow:0 0 0 3px rgba(89,199,255,.12)} .login-btn{width:100%;padding:13px 16px;border:0;border-radius:12px;background:linear-gradient(90deg,#268cff,#7c3cff);color:#fff;font-size:16px;font-weight:800;cursor:pointer} 📷 AHMAD UI 🔔 
+.login-section{padding:24px 0 8px} .login-form{max-width:520px;margin:0 auto;padding:24px;border-radius:18px;background:rgba(17,32,58,.92);border:1px solid #24446f;box-shadow:0 12px 30px rgba(0,0,0,.22)} .login-form h2{margin:0 0 20px;font-size:28px} .login-form .form-group{margin-bottom:16px} .login-form label{display:block;margin-bottom:7px;font-weight:700} .login-form input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid #31547f;background:#0b1730;color:#fff;outline:none;font:inherit} .login-form input:focus{border-color:#59c7ff;box-shadow:0 0 0 3px rgba(89,199,255,.12)} .login-btn{width:100%;padding:13px 16px;border:0;border-radius:12px;background:linear-gradient(90deg,#268cff,#7c3cff);color:#fff;font-size:16px;font-weight:800;cursor:pointer} .login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;background:#071225} .login-form{width:min(100%,390px);padding:30px 26px;box-sizing:border-box;border:1px solid rgba(89,215,255,.22);border-radius:22px;background:linear-gradient(145deg,#172d58,#0b1730);box-shadow:0 18px 55px rgba(0,0,0,.35)} .login-form h2{margin:0 0 8px;color:#fff;text-align:center;font-size:30px;font-weight:800} .login-subtitle{margin:0 0 24px;color:#9eb2cf;text-align:center;font-size:14px} .login-form .form-group{margin-bottom:17px} .login-form label{display:block;margin-bottom:8px;color:#fff;font-weight:700;font-size:14px} .login-form input{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid #31547c;border-radius:12px;outline:none;background:#0b1730;color:#fff;font-size:15px} .login-form input:focus{border-color:#59d7ff;box-shadow:0 0 0 3px rgba(89,215,255,.12)} .login-btn{width:100%;margin-top:5px;padding:14px;border:0;border-radius:12px;color:#fff;background:linear-gradient(90deg,#268cff,#7c3cff);font-size:16px;font-weight:800} .login-error{min-height:20px;margin-top:13px;color:#ff8f9c;text-align:center;font-size:14px;font-weight:700} #appContent{display:none} 
+
+Welcome
+
+Sign in to access AHMAD UI
+
+Username
+
+Password
+
+Sign In 
+
+📷 AHMAD UI 🔔 
 
 📷 PROFESSIONAL PHOTOGRAPHY WORKSPACE
 
@@ -108,3 +120,4 @@ Sign In
 
 🏠 Home 🎨 Tools 👤 My ⚙️ Setting 
 
+const LOGIN_USERNAME="Admin",LOGIN_PASSWORD="12345"; const loginScreen=document.getElementById("loginScreen"),appContent=document.getElementById("appContent"),loginForm=document.getElementById("loginForm"),loginError=document.getElementById("loginError"); function showApp(){loginScreen.style.display="none";appContent.style.display="block"} if(sessionStorage.getItem("ahmad_ui_logged_in")==="true")showApp(); loginForm.addEventListener("submit",function(e){e.preventDefault();const u=document.getElementById("username").value.trim(),p=document.getElementById("password").value;if(u===LOGIN_USERNAME&&p===LOGIN_PASSWORD){sessionStorage.setItem("ahmad_ui_logged_in","true");showApp()}else{loginError.textContent="❌ Wrong username or password."}});
