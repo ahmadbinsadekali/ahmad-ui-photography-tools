@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071225">
+  <title>Ahmad UI - Photography Tools</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .login-section{padding:24px 0 8px}
+    .login-form{max-width:520px;margin:0 auto;padding:24px;border-radius:18px;background:rgba(17,32,58,.92);border:1px solid #24446f;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+    .login-form h2{margin:0 0 20px;font-size:28px}
+    .login-form .form-group{margin-bottom:16px}
+    .login-form label{display:block;margin-bottom:7px;font-weight:700}
+    .login-form input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid #31547f;background:#0b1730;color:#fff;outline:none;font:inherit}
+    .login-form input:focus{border-color:#59c7ff;box-shadow:0 0 0 3px rgba(89,199,255,.12)}
+    .login-btn{width:100%;padding:13px 16px;border:0;border-radius:12px;background:linear-gradient(90deg,#268cff,#7c3cff);color:#fff;font-size:16px;font-weight:800;cursor:pointer}
+  </style>
+<style>
+.login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;background:#071225}
+.login-form{width:min(100%,390px);padding:30px 26px;box-sizing:border-box;border:1px solid rgba(89,215,255,.22);border-radius:22px;background:linear-gradient(145deg,#172d58,#0b1730);box-shadow:0 18px 55px rgba(0,0,0,.35)}
+.login-form h2{margin:0 0 8px;color:#fff;text-align:center;font-size:30px;font-weight:800}
+.login-subtitle{margin:0 0 24px;color:#9eb2cf;text-align:center;font-size:14px}
+.login-form .form-group{margin-bottom:17px}
+.login-form label{display:block;margin-bottom:8px;color:#fff;font-weight:700;font-size:14px}
+.login-form input{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid #31547c;border-radius:12px;outline:none;background:#0b1730;color:#fff;font-size:15px}
+.login-form input:focus{border-color:#59d7ff;box-shadow:0 0 0 3px rgba(89,215,255,.12)}
+.login-btn{width:100%;margin-top:5px;padding:14px;border:0;border-radius:12px;color:#fff;background:linear-gradient(90deg,#268cff,#7c3cff);font-size:16px;font-weight:800}
+.login-error{min-height:20px;margin-top:13px;color:#ff8f9c;text-align:center;font-size:14px;font-weight:700}
+#appContent{display:none}
+</style>
+</head>
+<body>
+<section class="login-screen" id="loginScreen">
+<div class="login-form">
+<h2>Welcome</h2>
+<p class="login-subtitle">Sign in to access AHMAD UI</p>
+<form id="loginForm">
+<div class="form-group"><label for="username">Username</label><input id="username" type="text" placeholder="Enter name" autocomplete="username" required></div>
+<div class="form-group"><label for="password">Password</label><input id="password" type="password" placeholder="Enter Password" autocomplete="current-password" required></div>
+<button type="submit" class="login-btn">Sign In</button>
+<div class="login-error" id="loginError"></div>
+</form>
+</div>
+</section>
+<div id="appContent">
+
+  <header class="topbar">
+    <a class="logo" href="#home">
+      <span class="logo-icon">📷</span>
+      <span>AHMAD UI</span>
+    </a>
+    <button class="bell" id="notificationBtn" aria-label="Notifications">🔔</button>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="tag">📷 PROFESSIONAL PHOTOGRAPHY WORKSPACE</div>
+      <h1>Capture. <span>Edit.</span> Inspire.</h1>
+      <p>
+        All your essential photography tools in one beautiful place.
+        Edit, enhance, remove backgrounds and prepare photos quickly.
+      </p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#tools">Start Editing →</a>
+        <a class="secondary-btn" href="#about">View Details</a>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="section-label">OVERVIEW</div>
+      <h2>Good afternoon. 👋</h2>
+      <div class="stats">
+        <div class="stat">
+          <strong>08</strong>
+          <span>Tools</span>
+        </div>
+        <div class="stat">
+          <strong>12</strong>
+          <span>Tasks</span>
+        </div>
+        <div class="stat">
+          <strong>24%</strong>
+          <span>Progress</span>
+        </div>
+        <div class="stat">
+          <strong>04</strong>
+          <span>Pending</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="tools-section">
+      <div class="section-label">OUR TOOLS</div>
+      <div class="section-head">
+        <div>
+          <h2>Everything you need</h2>
+          <p>All photography tools in one place.</p>
+        </div>
+        <span class="tools-count">8 tools ✨</span>
+      </div>
+
+      <div class="tool-grid">
+
+        <button class="tool-card" data-tool="Photo Editing">
+          <span class="tool-icon">🖼️</span>
+          <h3>Photo Editing</h3>
+          <p>Edit like a pro</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Photo Enhance">
+          <span class="tool-icon">✨</span>
+          <h3>Photo Enhance</h3>
+          <p>Improve quality</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Background Remove">
+          <span class="tool-icon">✂️</span>
+          <h3>Background Remove</h3>
+          <p>One click remove</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Background Change">
+          <span class="tool-icon">🌅</span>
+          <h3>Background Change</h3>
+          <p>Change background</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Photo to PDF">
+          <span class="tool-icon">📄</span>
+          <h3>Photo to PDF</h3>
+          <p>Convert image to PDF</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Download">
+          <span class="tool-icon">⬇️</span>
+          <h3>Download</h3>
+          <p>Download your files</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="NID Photo">
+          <span class="tool-icon">🪪</span>
+          <h3>NID Photo</h3>
+          <p>Make NID photo</p>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="tool-card" data-tool="Passport Photo">
+          <span class="tool-icon">👤</span>
+          <h3>Passport Photo</h3>
+          <p>Make passport size</p>
+          <span class="arrow">→</span>
+        </button>
+
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-label">ABOUT AHMAD UI</div>
+      <h2>Bring Your Photos to Life</h2>
+      <p>
+        Professional photography utilities designed with a clean,
+        modern interface so you can work faster from your phone or computer.
+      </p>
+
+      <div class="feature-row">
+        <div>✓ Fast workflow</div>
+        <div>✓ Clean interface</div>
+        <div>✓ Easy to use</div>
+      </div>
+    </section>
+
+    <section id="my" class="help">
+      <h2>Need Help?</h2>
+      <p>Let's create something great.</p>
+      <button class="primary-btn" id="contactBtn">Contact Us →</button>
+    </section>
+
+
+    <section class="login-section" id="login">
+      <div class="login-form">
+        <h2>Welcome</h2>
+
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" placeholder="Enter name">
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password">
+          </div>
+
+          <button class="login-btn" type="submit">Sign In</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>📷 AHMAD UI © 2026. All rights reserved.</div>
+  </footer>
+
+  <!-- Bottom navigation -->
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <a href="#home" class="active">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#tools">
+      <span class="nav-icon">🎨</span>
+      <span>Tools</span>
+    </a>
+    <a href="#my">
+      <span class="nav-icon">👤</span>
+      <span>My</span>
+    </a>
+    <a href="#settings" id="settingsBtn">
+      <span class="nav-icon">⚙️</span>
+      <span>Setting</span>
+    </a>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</div>
+
+<script>
+const LOGIN_USERNAME="Admin",LOGIN_PASSWORD="12345";
+const loginScreen=document.getElementById("loginScreen"),appContent=document.getElementById("appContent"),loginForm=document.getElementById("loginForm"),loginError=document.getElementById("loginError");
+function showApp(){loginScreen.style.display="none";appContent.style.display="block"}
+if(sessionStorage.getItem("ahmad_ui_logged_in")==="true")showApp();
+loginForm.addEventListener("submit",function(e){e.preventDefault();const u=document.getElementById("username").value.trim(),p=document.getElementById("password").value;if(u===LOGIN_USERNAME&&p===LOGIN_PASSWORD){sessionStorage.setItem("ahmad_ui_logged_in","true");showApp()}else{loginError.textContent="❌ Wrong username or password."}});
+</script>
+</body>
+</html>
